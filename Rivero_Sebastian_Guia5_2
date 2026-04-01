@@ -5,6 +5,7 @@ int main()
     int i, n, mayor;
     float suma = 0, promedio;
     for (i = 1; i <= 15; i++) {
+        printf("Ingrese un numero: ");
         scanf("%d", &n);
         suma += n;
         if (n > mayor) mayor = n;
