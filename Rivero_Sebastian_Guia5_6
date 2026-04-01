@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main() 
+{
+    int i, j;
+    float nota, sumaAlumno, sumaCurso = 0, promAlumno, promCurso;
+    for (i = 1; i <= 30; i++) {
+        sumaAlumno = 0;
+        for (j = 1; j <= 10; j++) {
+            printf("Ingrese la nota %d del alumno %d: ", j, i);
+            scanf("%f", &nota);
+            sumaAlumno += nota;
+        }
+        promAlumno = sumaAlumno / 10.0;
+        printf("Promedio alumno %d: %.2f\n", i, promAlumno);
+        sumaCurso += promAlumno;
+    }
+    promCurso = sumaCurso / 30;
+    printf("Promedio general del curso: %.2f\n", promCurso);
+    return 0;
+}

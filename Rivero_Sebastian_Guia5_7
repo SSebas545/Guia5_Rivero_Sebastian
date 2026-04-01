@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main() 
+{
+    int i, j, unidades, totalVendedor, totalGeneral = 0, mayorVenta = 0, vendedorMayor = 0, diaMayor = 0;
+    for (i = 1; i <= 20; i++) {
+        totalVendedor = 0;
+        for (j = 1; j <= 15; j++) {
+            scanf("%d", &unidades);
+            totalVendedor += unidades;
+            if (unidades > mayorVenta) {
+                mayorVenta = unidades;
+                vendedorMayor = i;
+                diaMayor = j;
+            }
+        }
+        printf("Total vendedor %d: %d\n", i, totalVendedor);
+        totalGeneral += totalVendedor;
+    }
+    printf("Total general: %d\n", totalGeneral);
+    printf("Mayor venta diaria: %d (Vendedor %d, Dia %d)\n", mayorVenta, vendedorMayor, diaMayor);
+    return 0;
+}

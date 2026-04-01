@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+int main() 
+{
+    int base, exp, i, resultado = 1;
+    printf("Ingrese la base y el exponente: ");
+    scanf("%d %d", &base, &exp);
+    for (i = 1; i <= exp; i++) {
+        resultado *= base;
+    }
+    printf("Potencia: %d\n", resultado);
+    return 0;
+}
